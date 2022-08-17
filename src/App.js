@@ -53,7 +53,7 @@ export default function App() {
     <>
     <CartProvider>
      <Routes>
-          <Route path="/" element={<HomeScreen useCart={useCart} categories = {categories} foods = {foods} />} />
+          <Route path="*" element={<HomeScreen useCart={useCart} categories = {categories} foods = {foods} />} />
           <Route path="/orders" element={<OrderScreen useCart={useCart} />} />
           <Route path="/delivery" useCart={useCart} element={<DeliveryScreen/>}/>
         </Routes>
