@@ -64,7 +64,7 @@ export default function ModalCard(props) {
 
               <img className ="img-rounded modal-img" src={food.image} alt="Card image cap"/>
 
-              <div class="card-body p-0 overflow-auto scroll">
+              <div class="card-body p-0 overflow-auto scroll" style={{height:"350px"}}>
                 <h5 class="modal-header justify-content-center font-modal text-center p-1 mt-2 mb-3">
                   {food.name}
                 </h5>
@@ -87,7 +87,7 @@ export default function ModalCard(props) {
                 </>
              
                 <div className="button-block justify-content-center p-3">
-                  <div className="btn-block " onClick={()=>{props.addItem(food)}} typeof="button" >
+                  <div className="btn-block pt-5" onClick={()=>{props.addItem(food)}} typeof="button" >
                  
                       <div className="button-colors icon-btn elevation-0 icon-text-btn v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default">
                     

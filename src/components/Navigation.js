@@ -44,7 +44,7 @@ export default function NavigationComponent(props) {
           
           return(
             
-        <div class="col-3 col-lg-3 col-sm-3 col-md-3 d-flex justify-content-center">
+        <div class="col-4 col-lg-4 col-sm-4 col-md-4 d-flex justify-content-center">
           <a class="link">
           {cat.catnameeng} 
           </a>
