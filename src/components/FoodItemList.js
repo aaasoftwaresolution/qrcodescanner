@@ -28,10 +28,13 @@ export default function FoodItemList(props) {
   } = props.useCart;
   // console.log(food);
   return (
-     <div class="col-sm-6 col-md-6 p-1" id="list-item-1">
+    <>
+    <div className="container">
+    <div className="row d-flex justify-content-center">
+     <div className="col-12 col-sm-10 p-2 font-color">
       
         <div class="card curve shadow p-0 mb-0 bg-white rounded" onClick={handleShow} >
-          <div class="card-body " >
+          <div class="card-body " id={food.id}>
             <div className="row" >
               <div className="col-3 ">
                 <img className="card-image" src={food.image}  alt="pic" />
@@ -53,6 +56,7 @@ export default function FoodItemList(props) {
             </div>
           </div>
         </div>
+      
         {/* <CartProvider> */}
         <Modal className="card shadow" show={show} onHide={handleClose} >
       <Modal.Body  >
@@ -64,7 +68,11 @@ export default function FoodItemList(props) {
     </Modal>
     {/* </CartProvider> */}
       </div>
+      </div>
+    </div>
     
+      
+      </>
       )
 
       

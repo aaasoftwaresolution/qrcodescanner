@@ -6,7 +6,7 @@ import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
 import moment from "moment";
 
-export default function DeliveryScreen() {
+export default function DeliveryScreen(props) {
   const [show, setShow] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const {
@@ -18,7 +18,7 @@ export default function DeliveryScreen() {
     setCartMetadata,
     updateItemQuantity,
     removeItem,
-  } = useCart();
+  } = props.useCart();
   const handleClick = () => {
     // 👇️ toggle
     setIsActive(true);
@@ -34,7 +34,15 @@ export default function DeliveryScreen() {
     
       setCartMetadata({"Pickup Time":value})
   };
+  // console.log(items);
 
+var val = [{metadata:metadata},{total_qty:totalUniqueItems},{total_amount:cartTotal}];
+items.forEach(el =>{
+   var item = {"name":el.name,"price":el.price,"quantity":el.quantity}
+   val.push(item)
+});
+console.log('here',JSON.stringify(val));
+  var myOtherUrl =  "https://wa.me/+918606783324?text=" + encodeURI(JSON.stringify(val));
   return (
     <div>
       <div className="container2">
@@ -162,7 +170,7 @@ export default function DeliveryScreen() {
             <div class="card curve shadow p-0 mb-0 bg-white rounded ">
               <div className="d-flex justify-content-between p-3">
                 <div className="">Net Total</div>
-                <div className=""></div>
+                <div className="">{cartTotal}</div>
               </div>
             </div>
           </div>
@@ -180,10 +188,11 @@ export default function DeliveryScreen() {
         <div className="container2">
           <div className=" fixed-bottom p-3">
             <div className="d-flex justify-content-center">
-            <a href="https://wa.me/+918606783324/?text=urlencodedtext"  className=" content-footer"
+             
+            <a href={myOtherUrl} className=" content-footer"
                 style={{
                   backgroundColor: isActive ? "green" : "rgb(83, 94, 121)",
-                  color: isActive ? "white" : "white",
+                  color: isActive ? "white" : "white",textDecoration:"none"
                 }}>
              
                 {" "} 

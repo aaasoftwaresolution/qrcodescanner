@@ -14,8 +14,8 @@ export default function FoodItemsSmall(props) {
       { props.categories ? props.categories.map( (cat,index) => { 
 
      return(
-      <div>
-      <Card.Title className="heading-color">{cat.catnameeng}</Card.Title> 
+      <>
+      <Card.Title className="heading-color p-3">{cat.catnameeng}</Card.Title> 
       {/* <FoodItemList  food={food}/> */}
       {props.foods.filter(food => food.category_id === cat.id).map(food_items => (
        <div>
@@ -24,7 +24,7 @@ export default function FoodItemsSmall(props) {
        </div>
       ))}
 
-      </div>
+      </>
       )
 
      

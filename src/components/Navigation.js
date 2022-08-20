@@ -3,7 +3,7 @@ import "../styles/navigation.css";
 import { useState, useEffect } from "react";
 
 
-export default function NavigationComponent() {
+export default function NavigationComponent(props) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
@@ -30,9 +30,9 @@ export default function NavigationComponent() {
     }
   }, [lastScrollY]);
  
-
   return (
-    
+    <>
+  
     <div className={`container3 fixed-top ${show && 'hidden'}`}>
       
     
@@ -40,15 +40,18 @@ export default function NavigationComponent() {
         <div className="d-flex justify-content-center ">
         <div class="row flex-nowrap navigationflow  ">
         
-     
-        <div class="col-3 col-lg-3 col-sm-3 col-md-3 ">
-          <a class="link" href="#list-item-1">
-            Appetizers
+        { props.categories ? props.categories.map( (cat,index) => { 
+          
+          return(
+            
+        <div class="col-3 col-lg-3 col-sm-3 col-md-3 d-flex justify-content-center">
+          <a class="link">
+          {cat.catnameeng} 
           </a>
-        </div>
-
+        </div>)
+}): "fff"}
         
-        <div class="col-3 col-lg-3 col-sm-3 col-md-3 ">
+        {/* <div class="col-3 col-lg-3 col-sm-3 col-md-3 ">
           <a class="link " href="#list-item-2">
             Pizza
           </a>
@@ -72,7 +75,7 @@ export default function NavigationComponent() {
           <a class="link" href="#list-item-6">
             Drinks
           </a>
-        </div>
+        </div> */}
         
         
 
@@ -86,5 +89,7 @@ export default function NavigationComponent() {
 
     
     </div>
+  
+  </>
   );
 }

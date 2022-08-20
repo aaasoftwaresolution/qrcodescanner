@@ -75,14 +75,14 @@ export default function ModalCard(props) {
                 {alreadyAdded ?  item_inc() :  "" }
                 {/* {console.log(props.items)} */}
                 <>
-                  <h6>Cart <br/>(Total Items : {props.totalUniqueItems} <br/> Total Amount {props.cartTotal})</h6>
+                  {/* <h6>Cart <br/>(Total Items : {props.totalUniqueItems} <br/> Total Amount {props.cartTotal})</h6>
                   <ul>
                     {props.items.filter(person => person.id === food.id).map((item) => (
                       <li key={item.id}>
                         {item.quantity} x {item.price} = {item.quantity*item.price}
                       </li>
                     ))}
-                 </ul>
+                 </ul> */}
 
                 </>
              

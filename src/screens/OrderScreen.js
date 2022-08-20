@@ -18,7 +18,18 @@ export default function OrderScreen() {
     <>
     <CartProvider>
       <div className="container2">
-        <h5 class="font-color p-3 text-center">My Orders</h5>
+        <div ><h5 class="font-color  p-3 text-center" >My Orders</h5>
+      </div>
+        <div className="d-flex justify-content-between" >
+        <Link to={"/"}>
+              <i class="fa  fa-arrow-left  p-3 font-color"></i>
+              </Link>
+              <div>
+              
+              </div>
+              <i class="fa-brands fa-facebook-f p-3"></i>
+              
+              </div>
         <div className="order1 col-12 col-sm-12 col-lg-12 col-md-12">
           <div class="card curve shadow p-0 mb-0 bg-white rounded ">
             <div class="card-body height">

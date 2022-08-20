@@ -9,7 +9,7 @@ export default function HomeScreen(props) {
   return (
     <div>
       {/* <CartProvider> */}
-        <Navigation/>
+        <Navigation categories={props.categories}/>
         <Header/>
         <Categories useCart={props.useCart()}  categories = {props.categories} foods = {props.foods} />
         <Footer/>
