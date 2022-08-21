@@ -6,7 +6,7 @@ export default function Header() {
       <div className="container2 d-flex justify-content-center">
         <img
           className="img-fluid"
-          src="images/header.jpg"
+          src="images/header2.jpg"
           alt="restaurant bg"
         />
       </div>

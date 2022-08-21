@@ -19,6 +19,14 @@ import DeliveryScreen from './screens/DeliveryScreen';
 
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
 
   const [categories, setCategories] = useState([]);
   const [foods, setFood] = useState([]);
@@ -50,7 +58,9 @@ export default function App() {
     }, [categories,foods]);
  
   return (
+    !loading && (
     <>
+    
     <CartProvider>
      <Routes>
           <Route path="*" element={<HomeScreen useCart={useCart} categories = {categories} foods = {foods} />} />
@@ -60,6 +70,8 @@ export default function App() {
         
     </CartProvider>
     </>
+    )
   );
 
 }
+// "homepage":"https://zandeepsanand.github.io/v-4-foodmenu",

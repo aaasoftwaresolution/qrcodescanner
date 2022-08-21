@@ -64,7 +64,7 @@ export default function ModalCard(props) {
 
               <img className ="img-rounded modal-img" src={food.image} alt="Card image cap"/>
 
-              <div class="card-body p-0 overflow-auto scroll" style={{height:"350px"}}>
+              <div class="card-body p-0 overflow-auto scroll" style={{height:"375px"}}>
                 <h5 class="modal-header justify-content-center font-modal text-center p-1 mt-2 mb-3">
                   {food.name}
                 </h5>
