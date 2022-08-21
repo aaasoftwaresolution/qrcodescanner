@@ -42,7 +42,7 @@ items.forEach(el =>{
    val.push(item)
 });
 console.log('here',JSON.stringify(val));
-  var myOtherUrl =  "https://wa.me/+918606783324?text=" + encodeURI(JSON.stringify(val));
+  var myOtherUrl =  "https://wa.me/+918129602660?text=" + encodeURI(JSON.stringify(val));
   return (
     <div>
       <div className="container2">
@@ -59,10 +59,10 @@ console.log('here',JSON.stringify(val));
                           <div class="form-check d-flex justify-content-center">
                             <input
                               class="form-check-input"
-                              type="checkbox"
+                              type="radio"
                               value=""
                               id="flexCheckDefault"
-                              disabled
+                              
                               
                             />
                             <label
@@ -75,7 +75,7 @@ console.log('here',JSON.stringify(val));
                           </div>
                         </div>
 
-                        <div className="d-flex justify-content-between p-3">
+                        <div className="d-flex justify-content-center p-3">
                           <div className="text-center font-color" style={{fontSize:"15px"}}>To get order delivered to your location</div>
                           <div className=""></div>
                         </div>
@@ -87,7 +87,7 @@ console.log('here',JSON.stringify(val));
                           <div class="form-check d-flex justify-content-center">
                             <input
                               class="form-check-input"
-                              type="checkbox"
+                              type="radio"
                               value=""
                               id="flexCheckDefault"
                               onClick={() => setShow((prev) => !prev)} 
@@ -123,7 +123,7 @@ console.log('here',JSON.stringify(val));
 
         <div className="order1 col-12 col-sm-12 col-lg-12 col-md-12">
           <div class="card curve shadow p-0 mb-0 bg-white rounded ">
-            <div class="card-body height">
+            <div class="card-body ">
               {/* horizontal time card  */}
 
               {show && (
@@ -169,8 +169,8 @@ console.log('here',JSON.stringify(val));
             </div>
             <div class="card curve shadow p-0 mb-0 bg-white rounded ">
               <div className="d-flex justify-content-between p-3">
-                <div className="">Net Total</div>
-                <div className="">{cartTotal}</div>
+                <div className="font-color" style={{fontWeight:"600"}}>Net Total :</div>
+                <div className="font-color" style={{fontWeight:"800"}}>{cartTotal}Rs/-</div>
               </div>
             </div>
           </div>

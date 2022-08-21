@@ -18,16 +18,18 @@ export default function OrderScreen() {
     <>
       <CartProvider>
         <div className="container2">
-          <div className="d-flex justify-content-between">
-            <Link to={"/"}>
-              <i class="fa  fa-arrow-left  p-3 font-color"></i>
-            </Link>
-            <div>
-              <div>
-                <h5 class="font-color  p-3 text-center">My Orders</h5>
+          <div className="">
+           
+              <div className="col-1 d-flex justify-content-start" style={{position:"absolute"}}>
+              <Link to={"/"}>
+                <i class="fa  fa-arrow-left  p-3 font-color"></i>
+                </Link>
               </div>
+            
+
+            <div className="col-11 d-flex justify-content-center">
+              <h5 class="font-color  p-3 text-center">My Orders</h5>
             </div>
-            <i class="fa-brands fa-facebook-f p-3"></i>
           </div>
           <div className="order1 col-12 col-sm-12 col-lg-12 col-md-12">
             <div class="card curve shadow p-0 mb-0 bg-white rounded ">
@@ -47,10 +49,7 @@ export default function OrderScreen() {
                           <div className="currency p-1"> S.R</div>
                         </div>
                       </div>
-                      <div
-                        className="col-11 d-flex justify-content-center "
-                        style={{ left: "100px" }}
-                      >
+                      <div className="col-11 d-flex justify-content-center ">
                         <button
                           className="button-five m-2"
                           onClick={() =>
@@ -84,7 +83,7 @@ export default function OrderScreen() {
               <div class="card curve shadow p-0 mb-0 bg-white rounded ">
                 <div className="d-flex justify-content-between p-3">
                   <div className="">Total</div>
-                  <div className="">{cartTotal}Rs /-</div>
+                  <div className="font-color" style={{fontWeight:"800"}}>{cartTotal}Rs /-</div>
                 </div>
               </div>
             </div>
@@ -93,7 +92,7 @@ export default function OrderScreen() {
         <div className="container2">
           <form>
             <div class="form-group p-1">
-              <label for="exampleFormControlTextarea1">Notes</label>
+              <label for="exampleFormControlTextarea1" className="p-3">Notes</label>
               <textarea
                 class="form-control"
                 id="exampleFormControlTextarea1"
