@@ -15,13 +15,13 @@ export default function Categories(props) {
           <Card.Header>
             <div className="d-flex justify-content-between">
               
-            <i class="fa-regular fa-clock fa-2x p-2 font-color"></i>
+            <i class="fa-regular fa-clock fa-2x p-2 font-color" data-aos="fade-right"></i>
             <div>
             <i class="fa-brands fa-snapchat-square fa-2x p-2"></i>
             <i class="fa-brands fa-instagram-square fa-2x p-2 "></i>
             <i class="fa-brands fa-twitter-square fa-2x p-2"></i>
             </div>
-            <i class="fa-brands fa-facebook-f fa-2x p-2"></i>
+            <i class="fa-brands fa-facebook-f fa-2x p-2" data-aos="fade-left"></i>
             
             </div>
           </Card.Header>

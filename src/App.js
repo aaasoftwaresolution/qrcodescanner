@@ -15,6 +15,7 @@ import Cart from './components/Cart';
 import OrderScreen from './screens/OrderScreen';
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import AOS from 'aos';
 import DeliveryScreen from './screens/DeliveryScreen';
 
 
@@ -50,6 +51,11 @@ export default function App() {
     useEffect(() => {
       fetchFoodCats();
       fetchFoods();
+      AOS.init({
+        duration: 1200,
+        
+      })
+      
     }, []);
 
     useEffect(() => {

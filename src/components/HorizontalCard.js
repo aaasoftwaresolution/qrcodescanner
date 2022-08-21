@@ -16,12 +16,13 @@ export default function HorizontCards(props) {
           ? props.categories.map((card, index) => {
               return (
                 <>
-                  <div class="col-sm-3 col-4 col-md-3">
-                    <div className="card p-1 shadow rounded " >
+               
+                  <div class="col-sm-3 col-4 col-md-3" >
+                    <div className="card p-1 shadow rounded " data-aos="fade-right">
                       <div className=" ">
                     <p class="card-text p-2 text-center" >{card.catnameeng}</p>
                     </div>
-                    <a class="link" href="#list-item-1">
+                    <a class="link" href={`#${card.catnameeng}`}>
                  
               <img  style={{ "width":"70px", "height":"70px" }} className="card-img-top horizontal-image pb-2" src={card.cat_image} alt="Card image cap" />
                     

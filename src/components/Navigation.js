@@ -36,7 +36,7 @@ export default function NavigationComponent(props) {
     <div className={`container3 fixed-top ${show && 'hidden'}`}>
       
     
-      <div className="nav-pills"  id="navbar-example2" >
+      <div className="nav-pills "  id="navbar-example2" >
         <div className="d-flex justify-content-center ">
         <div class="row flex-nowrap navigationflow  ">
         
@@ -45,7 +45,7 @@ export default function NavigationComponent(props) {
           return(
             
         <div class="col-4 col-lg-4 col-sm-4 col-md-4 d-flex justify-content-center">
-          <a class="link">
+          <a href={`#${cat.catnameeng}`} style={{textDecoration:"none", fontWeight:"700"}} className="font-color">
           {cat.catnameeng} 
           </a>
         </div>)

@@ -15,7 +15,7 @@ export default function FoodItemsSmall(props) {
 
      return(
       <>
-      <Card.Title className="heading-color p-3">{cat.catnameeng}</Card.Title> 
+      <Card.Title className="heading-color p-3 scrollspy-example" data-spy="scroll" data-target="#navbar-example2" data-offset="0" id={`${cat.catnameeng}`} data-aos="fade-down">{cat.catnameeng}</Card.Title> 
       {/* <FoodItemList  food={food}/> */}
       {props.foods.filter(food => food.category_id === cat.id).map(food_items => (
        <div>

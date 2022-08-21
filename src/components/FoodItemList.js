@@ -33,8 +33,8 @@ export default function FoodItemList(props) {
     <div className="row d-flex justify-content-center">
      <div className="col-12 col-sm-10 p-2 font-color">
       
-        <div class="card curve shadow p-0 mb-0 bg-white rounded" onClick={handleShow} >
-          <div class="card-body " id={food.id}>
+        <div class="card curve shadow p-0 mb-0 bg-white rounded" onClick={handleShow} data-aos="fade-up">
+          <div class="card-body " id={food.id} >
             <div className="row" >
               <div className="col-3 ">
                 <img className="card-image" src={food.image}  alt="pic" />

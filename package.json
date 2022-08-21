@@ -1,13 +1,13 @@
 {
-  
   "name": "foodmenu",
   "version": "0.1.0",
-  "homepage":"https://zandeepsanand.github.io/v-4-foodmenu",
+  "homepage": "https://zandeepsanand.github.io/v-4-foodmenu",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "bootstrap-cards": "^1.16.0",
@@ -24,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
