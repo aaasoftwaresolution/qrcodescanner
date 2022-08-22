@@ -83,7 +83,7 @@ export default function OrderScreen() {
               <div class="card curve shadow p-0 mb-0 bg-white rounded ">
                 <div className="d-flex justify-content-between p-3">
                   <div className="">Total</div>
-                  <div className="font-color" style={{fontWeight:"800"}}>{cartTotal}Rs /-</div>
+                  <div className="font-color" style={{fontWeight:"800"}}>{cartTotal}SR /-</div>
                 </div>
               </div>
             </div>
