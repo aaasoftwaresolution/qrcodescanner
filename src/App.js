@@ -17,6 +17,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import AOS from 'aos';
 import DeliveryScreen from './screens/DeliveryScreen';
+import ChartScreen from './screens/ChartScreen';
 
 
 export default function App() {
@@ -72,6 +73,7 @@ export default function App() {
           <Route path="*" element={<HomeScreen useCart={useCart} categories = {categories} foods = {foods} />} />
           <Route path="/orders" element={<OrderScreen useCart={useCart} />} />
           <Route path="/delivery"  element={<DeliveryScreen useCart={useCart}/>}/>
+          <Route path="/admin"  element={<ChartScreen  useCart={useCart}/>}/>
         </Routes>
         
     </CartProvider>
